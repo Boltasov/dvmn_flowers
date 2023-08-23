@@ -1,34 +1,6 @@
+{% extends "base.html" %}
 {% load static %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Flower Shop</title>
-	<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Unbounded:wght@700&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="{% static "css/main.css" %}">
-	<style type="text/css">
-	  .recommended__block_img {
-		background: url('{{ bouquet.photo.url }}') no-repeat center bottom / cover;
-	  }
-	</style>
-</head>
-<body>
-	<div class="mainBg">
-		<header id="header">
-			<div class="container">
-				<div class="header ficb">
-					<a href="/"><img src="{% static "img/logo.svg" %}" alt="logo" class="logo"></a>
-					<nav>
-						<ul class="menu ficc">
-							<li class="menu__item"><a href="#" class="menu__item_link">Каталог</a></li>
-							<li class="menu__item"><a href="#" class="menu__item_link">Рекомендации</a></li>
-							<li class="menu__item"><a href="#" class="menu__item_link">Контакты</a></li>
-						</ul>
-					</nav>
-				</div>
-			</div>
-		</header>
+	{% block banner %}
 		<section id="banner">
 			<div class="container">
 				<div class="banner">
@@ -41,8 +13,9 @@
 				</div>
 			</div>
 		</section>
-	</div>
-	<section id="recommended">
+	{% endblock %}
+	{% block content %}
+	  <section id="recommended">
 		<div class="container">
 			<img src="{{ bouquet.photo.url }}">
 			<div class="recommended p100">
@@ -58,11 +31,13 @@
 					</div>
 				  {% endfor %}
 				</div>
-				<button class="btn recommended__btn">Показать всю коллекцию</button>
+				<button class="btn recommended__btn" >Показать всю коллекцию</button>
 			</div>
 		</div>
-	</section>
-	<section id="contacts">
+	  </section>
+	{% endblock %}
+	{% block contacts %}
+	  <section id="contacts">
 		<div class="container">
 			<div class="contacts">
 				<div class="title">Как нас найти</div>
@@ -89,8 +64,10 @@
 				<button class="btn contacts__btn">Заказать доставку</button>
 			</div>
 		</div>
-	</section>
-	<section id="consultation">
+	  </section>
+	{% endblock %}
+	{% block consultation %}
+	  <section id="consultation">
 		<div class="container">
 			<div class="consultation">
 				<div class="title consultation__title">Оставьте заявку на консультацию</div>
@@ -101,23 +78,5 @@
 				</form>
 			</div>
 		</div>
-	</section>
-	<footer id="footer">
-		<div class="container">
-			<div class="footer">
-				<a href="/"><img src="{% static "img/logo.svg" %}" alt="logo" class="logo footer__logo"></a>
-				<nav>
-					<ul class="menu footer__menu ficc">
-						<li class="menu__item"><a href="#" class="menu__item_link">Каталог</a></li>
-						<li class="menu__item"><a href="#" class="menu__item_link">Рекомендации</a></li>
-						<li class="menu__item"><a href="#" class="menu__item_link">Контакты</a></li>
-					</ul>
-				</nav>
-				<hr class="line"></hr>
-				<a href="#" class="footer__poli">Политика конфиденциальности</a>
-				<p class="footer_cop">©️2022. FlowerShop. Все права защищены</p>
-			</div>
-		</div>
-	</footer>
-</body>
-</html>
+	  </section>
+	{% endblock %}
