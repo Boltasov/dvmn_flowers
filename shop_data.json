@@ -1,0 +1,1009 @@
+[
+{
+  "model": "admin.logentry",
+  "pk": 1,
+  "fields": {
+    "action_time": "2023-08-22T11:58:09.609Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "1",
+    "object_repr": "День рождения",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 2,
+  "fields": {
+    "action_time": "2023-08-22T11:58:14.289Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "2",
+    "object_repr": "Свадьба",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 3,
+  "fields": {
+    "action_time": "2023-08-22T12:50:08.469Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "1",
+    "object_repr": "Летнее утро - 3600р.",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 4,
+  "fields": {
+    "action_time": "2023-08-22T13:01:02.177Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "2",
+    "object_repr": "Зимняя сказка - 4100р.",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 5,
+  "fields": {
+    "action_time": "2023-08-22T13:01:55.563Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "3",
+    "object_repr": "Нежный - 2900р.",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 6,
+  "fields": {
+    "action_time": "2023-08-22T13:06:05.867Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "4",
+    "object_repr": "Пламенный закат - 3600р.",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 7,
+  "fields": {
+    "action_time": "2023-08-22T13:09:32.959Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "5",
+    "object_repr": "Осенний - 3600р.",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 8,
+  "fields": {
+    "action_time": "2023-08-22T13:15:29.409Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "6",
+    "object_repr": "Полевой - 1600р.",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 9,
+  "fields": {
+    "action_time": "2023-08-22T13:17:26.785Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "7",
+    "object_repr": "Весенний - 3200р.",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 10,
+  "fields": {
+    "action_time": "2023-08-22T16:57:23.189Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "1",
+    "object_repr": "Летнее утро - 3600.00р.",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u0424\\u043e\\u0442\\u043e\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 11,
+  "fields": {
+    "action_time": "2023-08-22T16:57:38.051Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "1",
+    "object_repr": "Летнее утро - 3600.00р.",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u0424\\u043e\\u0442\\u043e\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 12,
+  "fields": {
+    "action_time": "2023-08-22T16:57:45.036Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "2",
+    "object_repr": "Зимняя сказка - 4100.00р.",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u0424\\u043e\\u0442\\u043e\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 13,
+  "fields": {
+    "action_time": "2023-08-22T16:59:01.999Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "2",
+    "object_repr": "Зимняя сказка - 4100.00р.",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u0424\\u043e\\u0442\\u043e\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 14,
+  "fields": {
+    "action_time": "2023-08-22T16:59:07.567Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "3",
+    "object_repr": "Нежный - 2900.00р.",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u0424\\u043e\\u0442\\u043e\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 15,
+  "fields": {
+    "action_time": "2023-08-22T16:59:17.962Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "3",
+    "object_repr": "Нежный - 2900.00р.",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u0424\\u043e\\u0442\\u043e\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 16,
+  "fields": {
+    "action_time": "2023-08-22T16:59:26.948Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "4",
+    "object_repr": "Пламенный закат - 3600.00р.",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u0424\\u043e\\u0442\\u043e\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 17,
+  "fields": {
+    "action_time": "2023-08-22T17:00:27.956Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "4",
+    "object_repr": "Пламенный закат - 3600.00р.",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u0424\\u043e\\u0442\\u043e\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 18,
+  "fields": {
+    "action_time": "2023-08-22T17:00:33.766Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "5",
+    "object_repr": "Осенний - 3600.00р.",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u0424\\u043e\\u0442\\u043e\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 19,
+  "fields": {
+    "action_time": "2023-08-22T17:00:43.311Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "5",
+    "object_repr": "Осенний - 3600.00р.",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u0424\\u043e\\u0442\\u043e\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 20,
+  "fields": {
+    "action_time": "2023-08-22T17:00:48.678Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "6",
+    "object_repr": "Полевой - 1600.00р.",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u0424\\u043e\\u0442\\u043e\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 21,
+  "fields": {
+    "action_time": "2023-08-22T17:01:01.628Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "6",
+    "object_repr": "Полевой - 1600.00р.",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u0424\\u043e\\u0442\\u043e\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 22,
+  "fields": {
+    "action_time": "2023-08-22T17:01:10.642Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "7",
+    "object_repr": "Весенний - 3200.00р.",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u0424\\u043e\\u0442\\u043e\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 23,
+  "fields": {
+    "action_time": "2023-08-22T17:01:17.733Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "7",
+    "object_repr": "Весенний - 3200.00р.",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u0424\\u043e\\u0442\\u043e\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 24,
+  "fields": {
+    "action_time": "2023-08-22T17:03:15.898Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "3",
+    "object_repr": "Без повода",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 25,
+  "fields": {
+    "action_time": "2023-08-22T18:20:00.731Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "1",
+    "object_repr": "Заказ 1 - shop.Bouquet.None",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 26,
+  "fields": {
+    "action_time": "2023-08-22T18:21:02.605Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "2",
+    "object_repr": "Заказ 2 - shop.Bouquet.None",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 27,
+  "fields": {
+    "action_time": "2023-08-22T18:21:59.032Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "3",
+    "object_repr": "Заказ 3 - shop.Bouquet.None",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 28,
+  "fields": {
+    "action_time": "2023-08-22T20:14:45.476Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "1",
+    "object_repr": "Летнее утро - 3600.00р.",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u0424\\u043e\\u0442\\u043e\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 29,
+  "fields": {
+    "action_time": "2023-08-22T20:14:58.341Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "1",
+    "object_repr": "Летнее утро - 3600.00р.",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u0424\\u043e\\u0442\\u043e\"]}}]"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 1,
+  "fields": {
+    "name": "Can add log entry",
+    "content_type": 1,
+    "codename": "add_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 2,
+  "fields": {
+    "name": "Can change log entry",
+    "content_type": 1,
+    "codename": "change_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 3,
+  "fields": {
+    "name": "Can delete log entry",
+    "content_type": 1,
+    "codename": "delete_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 4,
+  "fields": {
+    "name": "Can view log entry",
+    "content_type": 1,
+    "codename": "view_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 5,
+  "fields": {
+    "name": "Can add permission",
+    "content_type": 2,
+    "codename": "add_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 6,
+  "fields": {
+    "name": "Can change permission",
+    "content_type": 2,
+    "codename": "change_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 7,
+  "fields": {
+    "name": "Can delete permission",
+    "content_type": 2,
+    "codename": "delete_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 8,
+  "fields": {
+    "name": "Can view permission",
+    "content_type": 2,
+    "codename": "view_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 9,
+  "fields": {
+    "name": "Can add group",
+    "content_type": 3,
+    "codename": "add_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 10,
+  "fields": {
+    "name": "Can change group",
+    "content_type": 3,
+    "codename": "change_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 11,
+  "fields": {
+    "name": "Can delete group",
+    "content_type": 3,
+    "codename": "delete_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 12,
+  "fields": {
+    "name": "Can view group",
+    "content_type": 3,
+    "codename": "view_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 13,
+  "fields": {
+    "name": "Can add user",
+    "content_type": 4,
+    "codename": "add_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 14,
+  "fields": {
+    "name": "Can change user",
+    "content_type": 4,
+    "codename": "change_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 15,
+  "fields": {
+    "name": "Can delete user",
+    "content_type": 4,
+    "codename": "delete_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 16,
+  "fields": {
+    "name": "Can view user",
+    "content_type": 4,
+    "codename": "view_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 17,
+  "fields": {
+    "name": "Can add content type",
+    "content_type": 5,
+    "codename": "add_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 18,
+  "fields": {
+    "name": "Can change content type",
+    "content_type": 5,
+    "codename": "change_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 19,
+  "fields": {
+    "name": "Can delete content type",
+    "content_type": 5,
+    "codename": "delete_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 20,
+  "fields": {
+    "name": "Can view content type",
+    "content_type": 5,
+    "codename": "view_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 21,
+  "fields": {
+    "name": "Can add session",
+    "content_type": 6,
+    "codename": "add_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 22,
+  "fields": {
+    "name": "Can change session",
+    "content_type": 6,
+    "codename": "change_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 23,
+  "fields": {
+    "name": "Can delete session",
+    "content_type": 6,
+    "codename": "delete_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 24,
+  "fields": {
+    "name": "Can view session",
+    "content_type": 6,
+    "codename": "view_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 25,
+  "fields": {
+    "name": "Can add Букет",
+    "content_type": 7,
+    "codename": "add_bouquet"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 26,
+  "fields": {
+    "name": "Can change Букет",
+    "content_type": 7,
+    "codename": "change_bouquet"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 27,
+  "fields": {
+    "name": "Can delete Букет",
+    "content_type": 7,
+    "codename": "delete_bouquet"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 28,
+  "fields": {
+    "name": "Can view Букет",
+    "content_type": 7,
+    "codename": "view_bouquet"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 29,
+  "fields": {
+    "name": "Can add Консультация",
+    "content_type": 8,
+    "codename": "add_consultation"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 30,
+  "fields": {
+    "name": "Can change Консультация",
+    "content_type": 8,
+    "codename": "change_consultation"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 31,
+  "fields": {
+    "name": "Can delete Консультация",
+    "content_type": 8,
+    "codename": "delete_consultation"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 32,
+  "fields": {
+    "name": "Can view Консультация",
+    "content_type": 8,
+    "codename": "view_consultation"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 33,
+  "fields": {
+    "name": "Can add Событие",
+    "content_type": 9,
+    "codename": "add_event"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 34,
+  "fields": {
+    "name": "Can change Событие",
+    "content_type": 9,
+    "codename": "change_event"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 35,
+  "fields": {
+    "name": "Can delete Событие",
+    "content_type": 9,
+    "codename": "delete_event"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 36,
+  "fields": {
+    "name": "Can view Событие",
+    "content_type": 9,
+    "codename": "view_event"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 37,
+  "fields": {
+    "name": "Can add Заказ",
+    "content_type": 10,
+    "codename": "add_order"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 38,
+  "fields": {
+    "name": "Can change Заказ",
+    "content_type": 10,
+    "codename": "change_order"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 39,
+  "fields": {
+    "name": "Can delete Заказ",
+    "content_type": 10,
+    "codename": "delete_order"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 40,
+  "fields": {
+    "name": "Can view Заказ",
+    "content_type": 10,
+    "codename": "view_order"
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$600000$cCWSIpIUTderr4V7f4CkQD$r3y7wTiSRDezdERzWNmI88IEJ0OO0j/XBLxX63gOj3w=",
+    "last_login": "2023-08-22T11:45:27.018Z",
+    "is_superuser": true,
+    "username": "adm",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2023-08-22T11:44:23.454Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 1,
+  "fields": {
+    "app_label": "admin",
+    "model": "logentry"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 2,
+  "fields": {
+    "app_label": "auth",
+    "model": "permission"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 3,
+  "fields": {
+    "app_label": "auth",
+    "model": "group"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 4,
+  "fields": {
+    "app_label": "auth",
+    "model": "user"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 5,
+  "fields": {
+    "app_label": "contenttypes",
+    "model": "contenttype"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 6,
+  "fields": {
+    "app_label": "sessions",
+    "model": "session"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 7,
+  "fields": {
+    "app_label": "shop",
+    "model": "bouquet"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 8,
+  "fields": {
+    "app_label": "shop",
+    "model": "consultation"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 9,
+  "fields": {
+    "app_label": "shop",
+    "model": "event"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 10,
+  "fields": {
+    "app_label": "shop",
+    "model": "order"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "smdclw3khoczhl6d91odupn2l56ob6tr",
+  "fields": {
+    "session_data": ".eJxVjEEOwiAQRe_C2pAOtgy4dN8zkBkYpGpoUtqV8e7apAvd_vfef6lA21rC1mQJU1IXBer0uzHFh9QdpDvV26zjXNdlYr0r-qBNj3OS5_Vw_w4KtfKtO_Je4JyhJ-wws0FgArGQxItJgjygTZ7Fxmx8b4cMZBmdE0fEENX7A_C_OJs:1qYPp9:lkR-ur8wGcJPaxNR7n0PkKxKuiQpR_UTDPH1_edEW10",
+    "expire_date": "2023-09-05T11:45:27.158Z"
+  }
+},
+{
+  "model": "shop.event",
+  "pk": 1,
+  "fields": {
+    "name": "День рождения"
+  }
+},
+{
+  "model": "shop.event",
+  "pk": 2,
+  "fields": {
+    "name": "Свадьба"
+  }
+},
+{
+  "model": "shop.event",
+  "pk": 3,
+  "fields": {
+    "name": "Без повода"
+  }
+},
+{
+  "model": "shop.bouquet",
+  "pk": 1,
+  "fields": {
+    "name": "Летнее утро",
+    "price": "3600.00",
+    "composition": "Гортензия розовая - 1 шт.\r\nВетки эквалипта - 5 шт.\r\nГипсофила - 1 шт.\r\nМатовая упаковка - 1 шт.\r\nЛента атласная - 1 шт.\r\nРекомендация по уходу - 1 шт.\r\nОткрыточка с вашими пожеланиями - 1 шт.\r\nЛюбовь флориста (бесплатно) - 1 шт.",
+    "size": "Высота - 50 см\r\nШирина - 30 см",
+    "photo": "recommendedBg1.jpg",
+    "events": [
+      1
+    ]
+  }
+},
+{
+  "model": "shop.bouquet",
+  "pk": 2,
+  "fields": {
+    "name": "Зимняя сказка",
+    "price": "4100.00",
+    "composition": "Розы садовые - 3шт.,\r\nКермек выемчатый - 2 шт.,\r\nГвоздика садовая белая - 9шт.,\r\nКанва",
+    "size": "Высота - 40 см\r\nШирина - 30 см",
+    "photo": "recommendedBg2.jpg",
+    "events": [
+      1
+    ]
+  }
+},
+{
+  "model": "shop.bouquet",
+  "pk": 3,
+  "fields": {
+    "name": "Нежный",
+    "price": "2900.00",
+    "composition": "Пионы - 5 шт.",
+    "size": "Высота - 60 см\r\nШирина - 30 см",
+    "photo": "recommendedBg3.jpg",
+    "events": [
+      1
+    ]
+  }
+},
+{
+  "model": "shop.bouquet",
+  "pk": 4,
+  "fields": {
+    "name": "Пламенный закат",
+    "price": "3600.00",
+    "composition": "Розы - 3 шт.,\r\nТюльпаны - 3 шт.,\r\nЛюпин - 2 шт.,\r\nМак белый - 3 шт.",
+    "size": "Высота - 70 см\r\nШирина - 50 см",
+    "photo": "catalogBg1.jpg",
+    "events": [
+      2
+    ]
+  }
+},
+{
+  "model": "shop.bouquet",
+  "pk": 5,
+  "fields": {
+    "name": "Осенний",
+    "price": "3600.00",
+    "composition": "Хризантемы - 15 шт.,\r\nБумага",
+    "size": "Высота - 60 см\r\nШирина - 30 см",
+    "photo": "catalogBg2.jpg",
+    "events": [
+      1
+    ]
+  }
+},
+{
+  "model": "shop.bouquet",
+  "pk": 6,
+  "fields": {
+    "name": "Полевой",
+    "price": "1600.00",
+    "composition": "Рудбекия - 7 шт.,\r\nПиретрум - 6 шт.,\r\nЛук декоративный - 2 шт.",
+    "size": "Высота - 50 см\r\nШирина - 30 см",
+    "photo": "catalogBg3.jpg",
+    "events": [
+      1
+    ]
+  }
+},
+{
+  "model": "shop.bouquet",
+  "pk": 7,
+  "fields": {
+    "name": "Весенний",
+    "price": "3200.00",
+    "composition": "Тюльпаны - 9 шт.",
+    "size": "Высота - 50 см\r\nШирина - 40 см",
+    "photo": "catalogBg4.jpg",
+    "events": [
+      2
+    ]
+  }
+},
+{
+  "model": "shop.order",
+  "pk": 1,
+  "fields": {
+    "client_name": "Леночка",
+    "phone": "8800200060",
+    "address": "ул. Космонавтов 5",
+    "datetime_created": "2023-08-22T18:20:00.583Z",
+    "deliver": "2023-08-22T23:59:00Z",
+    "status": "NEW",
+    "bouquet": [
+      1
+    ]
+  }
+},
+{
+  "model": "shop.order",
+  "pk": 2,
+  "fields": {
+    "client_name": "Олег",
+    "phone": "8928777889",
+    "address": "Казенный дом, камер 5",
+    "datetime_created": "2023-08-22T18:21:02.602Z",
+    "deliver": "2023-08-23T18:00:00Z",
+    "status": "NEW",
+    "bouquet": [
+      2
+    ]
+  }
+},
+{
+  "model": "shop.order",
+  "pk": 3,
+  "fields": {
+    "client_name": "Раиса Акакиевна",
+    "phone": "8905888009",
+    "address": "Красная площадь",
+    "datetime_created": "2023-08-22T18:21:59.029Z",
+    "deliver": "2023-08-23T12:00:00Z",
+    "status": "NEW",
+    "bouquet": [
+      3
+    ]
+  }
+}
+]
