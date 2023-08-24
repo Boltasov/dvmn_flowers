@@ -12,7 +12,7 @@
 						<h1 class="quiz__title">К какому событию нужен букет?</h1>
 						<div class="quiz__elems fic">
 							{% for event in events %}
-								<button class="quiz__elem">{{event.name}}</button>
+								<button class="quiz__elem" onclick="location.href='{% url 'shop:quiz_step' event.id %}'">{{event.name}}</button>
 							{% endfor %}
 						</div>
 						<div class="quiz__progress">

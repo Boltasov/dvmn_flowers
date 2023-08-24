@@ -11,4 +11,5 @@ urlpatterns = [
     path('order/', views.order, name='order'),
     path('pay/<int:order_id>', views.pay_form, name='pay_form'),
     path('quiz', views.quiz, name='quiz'),
+    path('quiz_step/<int:event_id>', views.quiz_step, name='quiz_step'),
 ]

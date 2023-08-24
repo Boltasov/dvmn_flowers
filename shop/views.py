@@ -54,3 +54,7 @@ def pay_form(request, order_id):
 def quiz(request):
     events = Event.objects.all()
     return render(request, 'quiz.html', {'events': events})
+
+
+def quiz_step(request, event_id):
+    return render(request, 'quiz-step.html')
