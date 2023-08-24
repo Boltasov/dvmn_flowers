@@ -10,4 +10,5 @@ urlpatterns = [
     path('catalog/<int:id>/', views.show_card, name='card'),
     path('order/', views.order, name='order'),
     path('pay/<int:order_id>', views.pay_form, name='pay_form'),
+    path('quiz', views.quiz, name='quiz'),
 ]

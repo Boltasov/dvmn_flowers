@@ -2,7 +2,7 @@ from django.shortcuts import render, get_object_or_404
 from django.db.models import Count
 from django.core.paginator import Paginator
 
-from .models import Bouquet
+from .models import Bouquet, Event
 
 
 def main_page(request):
@@ -49,3 +49,8 @@ def order(request):
 
 def pay_form(request, order_id):
     return render(request, 'order-step.html', {})
+
+
+def quiz(request):
+    events = Event.objects.all()
+    return render(request, 'quiz.html', {'events': events})
