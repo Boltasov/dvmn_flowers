@@ -1,9 +1,8 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from django.db.models import Count
-from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
+from django.core.paginator import Paginator
 
 from .models import Bouquet
-from dvmn_flowers.settings import MEDIA_ROOT, MEDIA_URL, STATIC_ROOT
 
 
 def main_page(request):
@@ -14,22 +13,39 @@ def main_page(request):
     })
 
 
-def division_rows(page, item_per_row):
-    for i in range(0, len(page), item_per_row):
-        yield page[i : i + 1]
-
-
 def catalog(request):
     catalog_bouquets = Bouquet.objects.all()
     paginator = Paginator(catalog_bouquets, 6)
-    number_pages = request.GET.get('page', 1)
-    bouquets = paginator.page(1)
-    if number_pages > 1:
-        for page in range(2, number_pages):
-            bouquets = bouquets.union(paginator.page(page))
-    catalog = list(division_rows(list(bouquets), 3))
-    print(bouquets)
-    print(catalog)
+    number_pages = int(request.GET.get('page', 1))
+    bouquets = []
+    for page in range(1, number_pages + 1):
+        print('We are here')
+        bouquets = bouquets + list(paginator.page(page))
+    chunks = [bouquets[i:i + 3] for i in range(0, len(bouquets), 3)]
+    next_page = number_pages + 1
+    button = True
+    if paginator.num_pages <= number_pages:
+        button = False
     return render(request, 'catalog.html', {
-        'catalog': catalog,
+        'catalog': chunks,
+        'next_page': next_page,
+        'button': button,
     })
+
+
+def show_card(request, id):
+    bouquet = get_object_or_404(Bouquet, id=id)
+    return render(request, 'card.html', {
+        'bouquet': bouquet,
+    })
+
+
+def order(request):
+    bouquet_id = request.GET.get('bouquet', 1)
+    return render(request, 'order.html', {
+        'id': bouquet_id,
+    })
+
+
+def pay_form(request, order_id):
+    return render(request, 'order-step.html', {})

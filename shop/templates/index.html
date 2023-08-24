@@ -20,17 +20,17 @@
 			<img src="{{ bouquet.photo.url }}">
 			<div class="recommended p100">
 				<div class="title">Рекомендуем</div>
-				<div class="recommended__elems ficb">
+				  <div class="recommended__elems ficb">
 				  {% for bouquet in recomendations %}
-				  	<div class="recommended__block" style="background: url('{{ bouquet.photo.url }}');">
-				      <div class="recommended__block_elems ficb">
+				  	<a class="recommended__block" style="background: url('{{ bouquet.photo.url }}'); display: block;" href="{% url "shop:card" bouquet.id %}">
+				      <div class="recommended__block ficb">
 						<span class="recommended__block_intro">{{ bouquet.name }}</span>
 						<span class="recommended__block_price">{{ bouquet.price }} руб</span>
 					  </div>
-					</div>
+					</a>
 				  {% endfor %}
 				</div>
-				<button class="btn recommended__btn" >Показать всю коллекцию</button>
+				<button class="btn recommended__btn" onclick="window.location.href='{% url "shop:catalog" %}';">Показать всю коллекцию</button>
 			</div>
 		</div>
 	  </section>
