@@ -49,3 +49,7 @@ def order(request):
 
 def pay_form(request, order_id):
     return render(request, 'order-step.html', {})
+
+
+def quiz(request):
+    return render(request, 'quiz.html', {})
