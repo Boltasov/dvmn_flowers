@@ -57,4 +57,17 @@ def quiz(request):
 
 
 def quiz_step(request, event_id):
-    return render(request, 'quiz-step.html')
+    return render(request, 'quiz-step.html', {'event_id': event_id})
+
+
+def result(request, event_id, price_level):
+    match price_level:
+        case 'low':
+            best_bouquet = Event.objects.get(pk=event_id).bouquets.all().filter(price__lt=2000).first()
+        case 'mid':
+            best_bouquet = Event.objects.get(pk=event_id).bouquets.all().filter(price__gt=2000, price__lt=5000).first()
+        case 'top':
+            best_bouquet = Event.objects.get(pk=event_id).bouquets.all().filter(price__gt=5000).first()
+        case _:
+            best_bouquet = Event.objects.get(pk=event_id).bouquets.all().first()
+    return render(request, 'result.html', {'bouquet': best_bouquet})
