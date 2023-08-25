@@ -1,27 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Flower Shop</title>
-	<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Unbounded:wght@700&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="css/main.css">	
-</head>
-<body>
-	<header id="header">
-		<div class="container">
-			<div class="header ficb">
-				<a href="/"><img src="img/logo.svg" alt="logo" class="logo"></a>
-				<nav>
-					<ul class="menu ficc">
-						<li class="menu__item"><a href="#" class="menu__item_link">Каталог</a></li>
-						<li class="menu__item"><a href="#" class="menu__item_link">Рекомендации</a></li>
-						<li class="menu__item"><a href="#" class="menu__item_link">Контакты</a></li>
-					</ul>
-				</nav>
-			</div>
-		</div>
-	</header>
+{% extends "base.html" %}
+{% load static %}
+	{% block result %}
 	<section id="result">
 		<div class="container">
 			<div class="result p100">
@@ -43,16 +22,16 @@
 							<span class="card__elems_intro">Состав:</span>
 							<div class="card__items">
 								<p class="card__items_text card__items_text__first">
-									Альстромерия белая 1 шт., Эустома белая 1 шт, Ромашка 1 шт, Роза пионовидная 1 шт 
+									{{ bouquet.composition|linebreaks }}
 								</p>
 								
 							</div>
 						</div>
 					</div>
-					<img src="img/cardImg.jpg" alt="result Img" class="result__block_img">
+					<img src="{{ bouquet.photo.url }}" alt="result Img" class="result__block_img">
 					<div class="result__items">
-						<div class="title result__items_title">Летнее утро</div>
-						<div class="result__items_price">3 600 руб</div>
+						<div class="title result__items_title">{{ bouquet.name }}</div>
+						<div class="result__items_price">{{ bouquet.price }} руб</div>
 						<button class="btn result__items_btn">Заказать букет</button>
 						<hr class="result__items_line" />
 						<div class="result__items_intro">Хотите что-то более специальное?</div>
@@ -105,22 +84,6 @@
 			</div>
 		</div>
 	</section>
-	<footer id="footer">
-		<div class="container">
-			<div class="footer">
-				<a href="/"><img src="img/logo.svg" alt="logo" class="logo footer__logo"></a>
-				<nav>
-					<ul class="menu footer__menu ficc">
-						<li class="menu__item"><a href="#" class="menu__item_link">Каталог</a></li>
-						<li class="menu__item"><a href="#" class="menu__item_link">Рекомендации</a></li>
-						<li class="menu__item"><a href="#" class="menu__item_link">Контакты</a></li>
-					</ul>
-				</nav>
-				<hr class="line"></hr>
-				<a href="#" class="footer__poli">Политика конфиденциальности</a>
-				<p class="footer_cop">©️2022. FlowerShop. Все права защищены</p>
-			</div>
-		</div>
-	</footer>
+	{% endblock %}
 </body>
 </html>
