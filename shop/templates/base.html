@@ -17,8 +17,8 @@
 					<nav>
 						<ul class="menu ficc">
 							<li class="menu__item"><a href="{% url "shop:catalog" %}" class="menu__item_link">Каталог</a></li>
-							<li class="menu__item"><a href="#" class="menu__item_link">Рекомендации</a></li>
-							<li class="menu__item"><a href="#" class="menu__item_link">Контакты</a></li>
+							<li class="menu__item"><a href="{% url "shop:main_page" %}#recommended" class="menu__item_link">Рекомендации</a></li>
+							<li class="menu__item"><a href="{% url "shop:main_page" %}#contacts" class="menu__item_link">Контакты</a></li>
 						</ul>
 					</nav>
 				</div>
@@ -53,8 +53,8 @@
 				<nav>
 					<ul class="menu footer__menu ficc">
 						<li class="menu__item"><a href="{% url "shop:catalog" %}" class="menu__item_link">Каталог</a></li>
-						<li class="menu__item"><a href="#" class="menu__item_link">Рекомендации</a></li>
-						<li class="menu__item"><a href="#" class="menu__item_link">Контакты</a></li>
+						<li class="menu__item"><a href="{% url "shop:main_page" %}#recommended" class="menu__item_link">Рекомендации</a></li>
+						<li class="menu__item"><a href="{% url "shop:main_page" %}#contacts" class="menu__item_link">Контакты</a></li>
 					</ul>
 				</nav>
 				<hr class="line"></hr>

@@ -1,11 +1,11 @@
 {% extends "base.html" %}
 {% load static %}
-	{% block quiz_step %}
+	{% block content %}
 	<section id="quiz">
 		<div class="container">
 			<div class="quiz">
 				<div class="quiz__back ">
-					<a href="#" class="quiz__back_link fic"><img src="img/arrow-left.svg" alt="arrow-left" class="arrowLeft">
+					<a href="#" class="quiz__back_link fic"><img src="{% static "img/arrow-left.svg" %}" alt="arrow-left" class="arrowLeft">
 					<span class="quiz__back_intro">Назад</span></a>
 				</div>
 				<div class="quiz__block">
@@ -32,5 +32,3 @@
 		</div>
 	</section>
 	{% endblock %}
-</body>
-</html>
