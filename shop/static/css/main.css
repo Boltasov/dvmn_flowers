@@ -606,6 +606,7 @@ color: rgba(0, 0, 0, .3);
 	margin-right: 10px;
 	margin-bottom: 10px;
 	min-height: 37px;
+	padding-top: 20px;
 }
 .radioLable {
 	padding: 10px 30px;

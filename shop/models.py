@@ -54,8 +54,7 @@ class Order(models.Model):
     """ Заказы """
     class Status(models.TextChoices):
         CREATED = 'NEW', 'Создан'
-        ASSEMBLE = 'ASSEMBLE', 'Собирается'
-        READY = 'READY', 'Готов к выдаче'
+        PAID = 'PAID', 'Оплачен'
         DONE = 'DONE', 'Доставлен'
 
     client_name = models.CharField(
@@ -84,7 +83,7 @@ class Order(models.Model):
         related_name='orders',
     )
     status = models.CharField(
-        max_length=8,
+        max_length=4,
         choices=Status.choices,
         default=Status.CREATED
     )
