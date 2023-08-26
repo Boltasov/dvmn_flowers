@@ -1,0 +1,19 @@
+<section id="consultation">
+    <div class="container">
+        <div class="consultation">
+            <div class="title consultation__title">Оставьте заявку на консультацию</div>
+            <form action="{% url "shop:consultation" %}" class="consultation__form" method="post">
+              {% for field in form %}
+                {% if field.name == 'checkbox' %}
+                  {{ field }}	<span class="chekbox__intro">{{ field.label_tag }}</span>
+                {% else %}
+                  {{ field }}
+                  {{ field.error }}
+                {% endif %}
+              {% endfor %}
+              {% csrf_token %}
+_              <button type="submit" class="consultation__form_btn">Отправить</button>
+            </form>
+        </div>
+    </div>
+</section>

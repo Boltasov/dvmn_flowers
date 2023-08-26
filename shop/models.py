@@ -1,4 +1,5 @@
 from django.db import models
+from phonenumber_field.modelfields import PhoneNumberField
 
 
 class Event(models.Model):
@@ -53,8 +54,7 @@ class Order(models.Model):
     """ Заказы """
     class Status(models.TextChoices):
         CREATED = 'NEW', 'Создан'
-        ASSEMBLE = 'ASSEMBLE', 'Собирается'
-        READY = 'READY', 'Готов к выдаче'
+        PAID = 'PAID', 'Оплачен'
         DONE = 'DONE', 'Доставлен'
 
     client_name = models.CharField(
@@ -83,7 +83,7 @@ class Order(models.Model):
         related_name='orders',
     )
     status = models.CharField(
-        max_length=8,
+        max_length=4,
         choices=Status.choices,
         default=Status.CREATED
     )
@@ -102,9 +102,17 @@ class Order(models.Model):
 
 class Consultation(models.Model):
     """ Заявки на консультацию """
-    client_name = models.CharField(max_length=50, verbose_name='Имя клиента')
-    phone = models.CharField(max_length=10, verbose_name='Телефон')  # Пока не стал запариваться с phone_number
-    datetime_created = models.DateTimeField(verbose_name='Дата создания заказа')
+    client_name = models.CharField(
+        max_length=50,
+        verbose_name='Имя клиента'
+    )
+    phone = PhoneNumberField(
+        verbose_name='Телефон'
+    )
+    datetime_created = models.DateTimeField(
+        verbose_name='Дата создания заказа',
+        auto_now_add=True,
+    )
 
     def __str__(self):
         return f'Консультация {self.pk} - {self.client_name}'

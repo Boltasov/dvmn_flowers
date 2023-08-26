@@ -249,7 +249,7 @@ margin-bottom: 19px;
 color: #FFFFFF;
 }
 .consultation__form {
-	width: 655px;
+	width: 950px;
 	margin: 0 auto;
 }
 .consultation__form_input {
@@ -606,6 +606,7 @@ color: rgba(0, 0, 0, .3);
 	margin-right: 10px;
 	margin-bottom: 10px;
 	min-height: 37px;
+	padding-top: 20px;
 }
 .radioLable {
 	padding: 10px 30px;
@@ -738,6 +739,7 @@ margin-bottom: 5px;
 	margin-right: 5px;
 }
 .chekbox__intro {
+	padding-left: 10px;
 	font-size: 10px;
 line-height: 145.02%;
 /* identical to box height, or 15px */
