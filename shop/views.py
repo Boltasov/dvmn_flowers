@@ -2,7 +2,8 @@ from django.shortcuts import render, get_object_or_404
 from django.db.models import Count
 from django.core.paginator import Paginator
 
-from .models import Bouquet, Event
+from .models import Bouquet, Event, Consultation
+from .forms import ConsultationFortm
 
 
 def main_page(request):
@@ -71,3 +72,24 @@ def result(request, event_id, price_level):
         case _:
             best_bouquet = Event.objects.get(pk=event_id).bouquets.all().first()
     return render(request, 'result.html', {'bouquet': best_bouquet})
+
+
+def consultation(request):
+    mark = False
+    if request.method == 'POST':
+        form = ConsultationFortm(request.POST)
+        if form.is_valid():
+            client_data = form.cleaned_data
+
+            appointment = Consultation(
+                client_name=client_data['name'],
+                phone=client_data['phone']
+            )
+            appointment.save()
+            mark = True
+    else:
+        form = ConsultationFortm()
+    return render(request, 'consultation.html', {
+        'form': form,
+        'mark': mark,
+    })
