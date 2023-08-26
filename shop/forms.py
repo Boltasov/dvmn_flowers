@@ -18,6 +18,6 @@ class ConsultationFortm(forms.Form):
     )
     checkbox = forms.BooleanField(required=True,
                                   widget=forms.CheckboxInput(),
-                                  label='Я согласен(а) с политикой конфидециоальности',
+                                  label='Я согласен(а) с политикой конфиденциальности',
                                   initial=True
                                   )

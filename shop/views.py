@@ -9,8 +9,10 @@ from .forms import ConsultationFortm
 def main_page(request):
     popular_bouquets = Bouquet.objects.all()\
         .annotate(count=Count('orders')).order_by('-count')[:3]
+    form = ConsultationFortm()
     return render(request, 'index.html', {
         'recomendations': popular_bouquets,
+        'form': form,
     })
 
 
@@ -19,6 +21,7 @@ def catalog(request):
     paginator = Paginator(catalog_bouquets, 6)
     number_pages = int(request.GET.get('page', 1))
     bouquets = []
+    form = ConsultationFortm()
     for page in range(1, number_pages + 1):
         print('We are here')
         bouquets = bouquets + list(paginator.page(page))
@@ -31,13 +34,16 @@ def catalog(request):
         'catalog': chunks,
         'next_page': next_page,
         'button': button,
+        'form': form,
     })
 
 
 def show_card(request, id):
     bouquet = get_object_or_404(Bouquet, id=id)
+    form = ConsultationFortm()
     return render(request, 'card.html', {
         'bouquet': bouquet,
+        'form': form,
     })
 
 
@@ -62,6 +68,7 @@ def quiz_step(request, event_id):
 
 
 def result(request, event_id, price_level):
+    form = ConsultationFortm()
     match price_level:
         case 'low':
             best_bouquet = Event.objects.get(pk=event_id).bouquets.all().filter(price__lt=2000).first()
@@ -71,7 +78,8 @@ def result(request, event_id, price_level):
             best_bouquet = Event.objects.get(pk=event_id).bouquets.all().filter(price__gt=5000).first()
         case _:
             best_bouquet = Event.objects.get(pk=event_id).bouquets.all().first()
-    return render(request, 'result.html', {'bouquet': best_bouquet})
+    return render(request, 'result.html', {'bouquet': best_bouquet,
+                                           'form': form})
 
 
 def consultation(request):

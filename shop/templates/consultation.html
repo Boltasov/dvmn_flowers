@@ -5,8 +5,12 @@
 		<div class="container">
 			<div class="singUpConsultation">
 			  {% if mark %}
-				<div class="title">Отлично, скоро с вами свяжемся. А пока можете присмотреть что-нибудь из готовой коллекции</div>
-				<button class="btn singUpConsultation__form_btn" onclick="window.location.href='{% url "shop:catalog" %}'">Посмотреть</button>
+				<div style="margin-top: 200px; font-size: 32px;">
+				  Отлично, скоро с вами свяжемся. А пока можете присмотреть что-нибудь из готовой коллекции
+				  <div style="padding-left: 20%; padding-top: 40px;">
+				  	<button class="btn singUpConsultation__form_btn" onclick="window.location.href='{% url "shop:catalog" %}'">Посмотреть</button>
+				  </div>
+				</div>
 			  {% else %}
 				<form action="#" class="singUpConsultation__form" method="post">
 					<div class="title">Запись на консультацию</div>
@@ -17,6 +21,7 @@
 						</div>
 					  {% else %}
 					      {{ field }}
+						  {{ field.errors}}
 					  {% endif %}
 					{% endfor %}
 					{% csrf_token %}
