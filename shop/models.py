@@ -97,6 +97,10 @@ class Order(models.Model):
         choices=Status.choices,
         default=Status.CREATED
     )
+    paid = models.BooleanField(
+        default=False,
+        verbose_name='Оплачено'
+    )
 
     def __str__(self):
         return f'Заказ {self.pk} - {self.bouquet}'
@@ -110,21 +114,19 @@ class Order(models.Model):
         ]
 
     def save(self, *args, **kwargs):
-        if not self.pk:
-            pass
-
         super(Order, self).save(*args, **kwargs)
-        load_dotenv()
-        tg_bot_key = os.getenv('TG_BOT_KEY')
-        user_id = os.getenv('CHAT_ID')
-        bot = Bot(token=tg_bot_key)
-        message = f'''\
-                    Новый заказ
-
-                    Клиент: {self.client_name}
-                    Адрес: {self.address}
-                    Телеффон: {self.phone} '''
-        bot.send_message(text=dedent(message), chat_id=user_id)
+        if self.paid:
+            load_dotenv()
+            tg_bot_key = os.getenv('TG_BOT_KEY')
+            user_id = os.getenv('CHAT_ID')
+            bot = Bot(token=tg_bot_key)
+            message = f'''\
+                        Новый заказ
+    
+                        Клиент: {self.client_name}
+                        Адрес: {self.address}
+                        Телеффон: {self.phone} '''
+            bot.send_message(text=dedent(message), chat_id=user_id)
 
 
 class Consultation(models.Model):
