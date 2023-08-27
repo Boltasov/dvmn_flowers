@@ -28,6 +28,11 @@ class Bouquet(models.Model):
     composition = models.TextField(
         verbose_name='Состав'
     )
+    description = models.TextField(
+        verbose_name='Описание',
+        blank=True,
+        null=True,
+    )
     size = models.TextField(
         verbose_name='Размер'
     )
