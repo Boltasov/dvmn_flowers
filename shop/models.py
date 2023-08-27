@@ -1,5 +1,10 @@
+import os
+
 from django.db import models
 from phonenumber_field.modelfields import PhoneNumberField
+from telegram import Bot
+from textwrap import dedent
+from dotenv import load_dotenv
 
 
 class Event(models.Model):
@@ -103,6 +108,23 @@ class Order(models.Model):
         indexes = [
             models.Index(fields=['-datetime_created', 'address']),
         ]
+
+    def save(self, *args, **kwargs):
+        if not self.pk:
+            pass
+
+        super(Order, self).save(*args, **kwargs)
+        load_dotenv()
+        tg_bot_key = os.getenv('TG_BOT_KEY')
+        user_id = os.getenv('CHAT_ID')
+        bot = Bot(token=tg_bot_key)
+        message = f'''\
+                    Новый заказ
+
+                    Клиент: {self.client_name}
+                    Адрес: {self.address}
+                    Телеффон: {self.phone} '''
+        bot.send_message(text=dedent(message), chat_id=user_id)
 
 
 class Consultation(models.Model):
