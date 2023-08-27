@@ -15,4 +15,6 @@ urlpatterns = [
     path('result/<int:event_id>/<str:price_level>', views.result,
          name='result'),
     path('consultation/', views.consultation, name='consultation'),
+    path('confidentcialnost/', views.confidentcialnost,
+         name='confidentcialnost'),
 ]

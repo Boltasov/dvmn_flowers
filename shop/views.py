@@ -76,7 +76,7 @@ def order(request):
                     delivery_time = datetime.datetime.combine(tomorrow, time)
                 else:
                     delivery_time = datetime.datetime.combine(now.date(), time)
-            
+
             name = order_data['name']
             phone = order_data['phone']
             address = order_data['address']
@@ -92,7 +92,7 @@ def order(request):
             new_order.bouquet.set([bouquet])
             return HttpResponseRedirect(reverse('shop:pay_form',
                                                 args=(new_order.id,)))
-        
+
     form = OrderForm()
     return render(request, 'order.html', {
         'id': bouquet_id,
@@ -151,3 +151,7 @@ def consultation(request):
         'form': form,
         'mark': mark,
     })
+
+
+def confidentcialnost(request):
+    return render(request, 'confidentcialnost.html', {})
