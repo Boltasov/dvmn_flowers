@@ -96,33 +96,8 @@ def order(request):
             new_order.save()
             new_order.bouquet.set([bouquet])
 
-            load_dotenv()
-            account_id = os.getenv('ACCOUNT_ID')
-            secret_key = os.getenv('SECRET_KEY')
-            Configuration.configure(account_id, secret_key)
-
-            idempotence_key = str(uuid.uuid4())
-            return_url = request.build_absolute_uri(reverse('shop:pay_form', args=(new_order.id,)))
-            payment = Payment.create({
-                "amount": {
-                    "value": "100.00",
-                    "currency": "RUB"
-                },
-                "payment_method_data": {
-                    "type": "bank_card"
-                },
-                "confirmation": {
-                    "type": "redirect",
-                    "return_url": return_url
-                },
-                "description": "Донат на митапе"
-            }, idempotence_key)
-
-            confirmation_url = payment.confirmation.confirmation_url
-
-            return HttpResponseRedirect(confirmation_url)
-            #return HttpResponseRedirect(reverse('shop:pay_form',
-            #                                    args=(new_order.id,)))
+            return HttpResponseRedirect(reverse('shop:pay_form',
+                                                args=(new_order.id,)))
 
     form = OrderForm()
     return render(request, 'order.html', {
@@ -132,6 +107,35 @@ def order(request):
 
 
 def pay_form(request, order_id):
+    load_dotenv()
+    account_id = os.getenv('ACCOUNT_ID')
+    secret_key = os.getenv('SECRET_KEY')
+    Configuration.configure(account_id, secret_key)
+
+    idempotence_key = str(uuid.uuid4())
+    return_url = request.build_absolute_uri(reverse('shop:paid_form',
+                                                    args=(order_id,)))
+    payment = Payment.create({
+        "amount": {
+            "value": "100.00",
+            "currency": "RUB"
+        },
+        "payment_method_data": {
+            "type": "bank_card"
+        },
+        "confirmation": {
+            "type": "redirect",
+            "return_url": return_url
+        },
+        "description": "Донат на митапе"
+    }, idempotence_key)
+
+    confirmation_url = payment.confirmation.confirmation_url
+
+    return HttpResponseRedirect(confirmation_url)
+
+
+def paid_form(request, order_id):
     order = Order.objects.get(id=order_id)
     order.paid = True
     order.save()
