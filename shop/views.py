@@ -1,4 +1,6 @@
 import datetime
+import os
+import uuid
 
 from django.shortcuts import render, get_object_or_404, HttpResponseRedirect
 from django.db.models import Count
@@ -8,6 +10,9 @@ from django.utils import timezone
 
 from .models import Bouquet, Event, Consultation, Order
 from .forms import ConsultationFortm, OrderForm
+
+from dotenv import load_dotenv
+from yookassa import Configuration, Payment
 
 
 def main_page(request):
@@ -90,8 +95,34 @@ def order(request):
             )
             new_order.save()
             new_order.bouquet.set([bouquet])
-            return HttpResponseRedirect(reverse('shop:pay_form',
-                                                args=(new_order.id,)))
+
+            load_dotenv()
+            account_id = os.getenv('ACCOUNT_ID')
+            secret_key = os.getenv('SECRET_KEY')
+            Configuration.configure(account_id, secret_key)
+
+            idempotence_key = str(uuid.uuid4())
+            return_url = request.build_absolute_uri(reverse('shop:pay_form', args=(new_order.id,)))
+            payment = Payment.create({
+                "amount": {
+                    "value": "100.00",
+                    "currency": "RUB"
+                },
+                "payment_method_data": {
+                    "type": "bank_card"
+                },
+                "confirmation": {
+                    "type": "redirect",
+                    "return_url": return_url
+                },
+                "description": "Донат на митапе"
+            }, idempotence_key)
+
+            confirmation_url = payment.confirmation.confirmation_url
+
+            return HttpResponseRedirect(confirmation_url)
+            #return HttpResponseRedirect(reverse('shop:pay_form',
+            #                                    args=(new_order.id,)))
 
     form = OrderForm()
     return render(request, 'order.html', {
@@ -101,7 +132,11 @@ def order(request):
 
 
 def pay_form(request, order_id):
-    return render(request, 'order-step.html', {})
+    order = Order.objects.get(id=order_id)
+    order.paid = True
+    order.save()
+    return main_page(request)
+    #return render(request, 'order-step.html', {})
 
 
 def quiz(request):
