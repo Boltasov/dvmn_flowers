@@ -115,9 +115,11 @@ def pay_form(request, order_id):
     idempotence_key = str(uuid.uuid4())
     return_url = request.build_absolute_uri(reverse('shop:paid_form',
                                                     args=(order_id,)))
+
+    bouquet = Order.bouquet.all().first()
     payment = Payment.create({
         "amount": {
-            "value": "100.00",
+            "value": bouquet.price,
             "currency": "RUB"
         },
         "payment_method_data": {
@@ -127,7 +129,7 @@ def pay_form(request, order_id):
             "type": "redirect",
             "return_url": return_url
         },
-        "description": "Донат на митапе"
+        "description": bouquet.name
     }, idempotence_key)
 
     confirmation_url = payment.confirmation.confirmation_url

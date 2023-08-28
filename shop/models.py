@@ -131,7 +131,9 @@ class Order(models.Model):
                         Букет: {bouquets_text}
                         Клиент: {self.client_name}
                         Адрес: {self.address}
-                        Телеффон: {self.phone} '''
+                        Время доставки: {str(self.deliver)}
+                        
+                        Телефон: {self.phone} '''
             bot.send_message(text=dedent(message), chat_id=user_id)
 
 
