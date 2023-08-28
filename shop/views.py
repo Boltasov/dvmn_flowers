@@ -102,8 +102,7 @@ def order(request):
             Configuration.configure(account_id, secret_key)
 
             idempotence_key = str(uuid.uuid4())
-            return_url =  request.build_absolute_uri(reverse('shop:pay_form', args=(new_order.id,)))
-            print(return_url)
+            return_url = request.build_absolute_uri(reverse('shop:pay_form', args=(new_order.id,)))
             payment = Payment.create({
                 "amount": {
                     "value": "100.00",
@@ -133,8 +132,10 @@ def order(request):
 
 
 def pay_form(request, order_id):
-    Order.objects.filter(id=order_id).update(paid=True)
-    return render(request, 'main_page.html', {})
+    order = Order.objects.get(id=order_id)
+    order.paid = True
+    order.save()
+    return main_page(request)
     #return render(request, 'order-step.html', {})
 
 

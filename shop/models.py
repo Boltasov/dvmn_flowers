@@ -120,9 +120,15 @@ class Order(models.Model):
             tg_bot_key = os.getenv('TG_BOT_KEY')
             user_id = os.getenv('CHAT_ID')
             bot = Bot(token=tg_bot_key)
+            bouquets_text = ''
+            for bouquet in self.bouquet.all():
+                bouquets_text = bouquets_text + ' ' + bouquet.name
+                print(bouquet.name)
+            print(self.bouquet.all())
             message = f'''\
                         Новый заказ
-    
+
+                        Букет: {bouquets_text}
                         Клиент: {self.client_name}
                         Адрес: {self.address}
                         Телеффон: {self.phone} '''
