@@ -71,13 +71,13 @@ class Order(models.Model):
         max_length=50,
         verbose_name='Имя клиента'
     )
-    phone = models.CharField(
-        max_length=10,
-        verbose_name='Телефон'
-    )  # Пока не стал запариваться с phone_number
+    phone = PhoneNumberField(
+        verbose_name='Телефон',
+    )
     address = models.CharField(
         max_length=150,
-        verbose_name='Адрес доставки'
+        verbose_name='Адрес доставки',
+        db_index=True,
     )
     datetime_created = models.DateTimeField(
         verbose_name='Дата создания заказа',
@@ -145,7 +145,7 @@ class Consultation(models.Model):
         verbose_name='Телефон'
     )
     datetime_created = models.DateTimeField(
-        verbose_name='Дата создания заказа',
+        verbose_name='Дата запроса на косультацию',
         auto_now_add=True,
     )
 
